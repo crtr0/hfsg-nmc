@@ -101,7 +101,7 @@ class CallLogsController < ApplicationController
     call_log.save
     url = url_for :action => :edit, :id => call_log
     render :content_type => 'text/xml',
-      :text => "<Response><Sms to='5037080707' from='(503) 766-5528'>Here is the link to your entry form for #{params[:From]}: #{url}</Sms></Response>"
+      :text => "<Response><Sms to='3606077975' from='(503) 766-5528'>Here is the link to your entry form for #{params[:From]}: #{url}</Sms></Response>"
   end
 
 end
