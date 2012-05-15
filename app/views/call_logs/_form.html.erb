@@ -1,5 +1,5 @@
 <%= form_for(@call_log) do |f| %>
- <div class="well">
+ 
   <% if @call_log.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@call_log.errors.count, "error") %> prohibited this call_log from being saved:</h2>
@@ -14,7 +14,7 @@
 
         <div class="control-group">
           <div class="controls">
-            <input type="text" class="input-large" placeholder="Today's Date mm/dd/yyyy" name="DateCall">
+            <input type="text" class="input-large" disabled="disabled" value="<%= @call_log.created_at %>">
           </div>
         </div>
 
@@ -145,10 +145,10 @@
           <label class="control-label">Would you like a call back?</label>
           <div class="controls">
             <label class="radio">
-              <input type="radio" name="StatusCallback" id="optionsRadios1" value="yes">
+              <input type="radio" name="call_log[callBack]" id="optionsRadios1" value="yes">
               Yes              </label>
             <label class="radio">
-              <input type="radio" name="StatusCallback" id="optionsRadios2" value="no">
+              <input type="radio" name="call_log[callBack]" id="optionsRadios2" value="no">
               No              </label>
           </div>
         </div>
@@ -170,8 +170,4 @@
 
         <button type="submit" class="btn btn-large btn-primary input-large" name="submit">Log Call</button>
 
-
-    <div class="actions">
-    </div>
-  </div>
 <% end %>

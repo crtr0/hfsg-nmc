@@ -12,14 +12,31 @@
     @media (max-width: 767px) {}
     @media (min-width: 768px) and (max-width: 979px) {}
     @media (min-width: 1200px) {}
+
+    td, th {padding:5px}
+
+    #notice {border-radius:5px; background-color: #FFFF7E; padding:5px; display:inline; line-height:20px;}
+
+
+    .center_content {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
   </style>
 
   <meta content="authenticity_token" name="csrf-param" />
   <meta content="km65WQ5Xka4NaJWghr6AAlYrHHd/NCffYLqVQTab/oI=" name="csrf-token" />
 </head>
 <body>
+	<div class="center_content hidden-desktop">
+	<img src="/assets/masthead02.png" width="320" />
+	</div>
+	<img class="hidden-phone hidden-tablet" src="/assets/masthead02.png" width="320" />
 	<div class="container-fluid">
-	<%= yield %>
+		<div class="well">
+		<%= yield %>
+		</div>
 	</div>
 </body>
 </html>

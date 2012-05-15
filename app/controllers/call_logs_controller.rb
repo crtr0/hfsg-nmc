@@ -60,7 +60,7 @@ class CallLogsController < ApplicationController
 
     respond_to do |format|
       if @call_log.update_attributes(params[:call_log])
-        format.html { redirect_to @call_log, notice: 'Call log was successfully updated.' }
+        format.html { redirect_to call_logs_url, notice: 'Call log was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
