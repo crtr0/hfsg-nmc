@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120515181158) do
+ActiveRecord::Schema.define(:version => 20120515190900) do
 
   create_table "call_logs", :force => true do |t|
     t.string   "callerName"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(:version => 20120515181158) do
     t.string   "callBack"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "from_number"
+    t.string   "from_city"
+    t.string   "from_state"
+    t.string   "to_number"
   end
 
 end

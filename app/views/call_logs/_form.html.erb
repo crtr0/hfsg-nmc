@@ -1,4 +1,5 @@
 <%= form_for(@call_log) do |f| %>
+ <div class="well">
   <% if @call_log.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@call_log.errors.count, "error") %> prohibited this call_log from being saved:</h2>
@@ -11,51 +12,166 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :callerName %><br />
-    <%= f.text_field :callerName %>
-  </div>
-  <div class="field">
-    <%= f.label :momsAge %><br />
-    <%= f.text_field :momsAge %>
-  </div>
-  <div class="field">
-    <%= f.label :howHeard %><br />
-    <%= f.text_field :howHeard %>
-  </div>
-  <div class="field">
-    <%= f.label :wic %><br />
-    <%= f.text_field :wic %>
-  </div>
-  <div class="field">
-    <%= f.label :ethnicity %><br />
-    <%= f.text_field :ethnicity %>
-  </div>
-  <div class="field">
-    <%= f.label :babyAge %><br />
-    <%= f.text_field :babyAge %>
-  </div>
-  <div class="field">
-    <%= f.label :whereDelivered %><br />
-    <%= f.text_field :whereDelivered %>
-  </div>
-  <div class="field">
-    <%= f.label :howLongBF %><br />
-    <%= f.text_field :howLongBF %>
-  </div>
-  <div class="field">
-    <%= f.label :infoHelping %><br />
-    <%= f.text_field :infoHelping %>
-  </div>
-  <div class="field">
-    <%= f.label :referral %><br />
-    <%= f.text_field :referral %>
-  </div>
-  <div class="field">
-    <%= f.label :callBack %><br />
-    <%= f.text_field :callBack %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+        <div class="control-group">
+          <div class="controls">
+            <input type="text" class="input-large" placeholder="Today's Date mm/dd/yyyy" name="DateCall">
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="text" class="input-large" placeholder="Enter place of birth" name="call_log[whereDelivered]">
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[babyAge]">
+              <option value="label">Baby's Age</option>
+              <option value="0-3 months">0-3 months</option>
+              <option value="4-6 months">4-6 months</option>
+              <option value="7-9 months">7-9 months</option>
+              <option value="10-12 months">10-12 months</option>
+              <option value="1 year old">1 year old</option>
+              <option value="2 years old">2 years old</option>
+              <option value="3 years old">3 years old</option>
+              <option value="4+ years old">4+ years old</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[howHeard]">
+              <option value="label">How Did You Hear About Us?</option>
+              <option value="Print Ad">Print Ad</option>
+              <option value="TV/Radio">TV/Radio</option>
+              <option value="Brochure">Brochure</option>
+              <option value="Health Provider">Health Provider</option>
+              <option value="Friend">Friend</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Other Internet">Other Internet</option>
+              <option value="Other">Other</option>
+            </select>
+            <br />
+            <input type="text" class="input-large" placeholder="Provider Name" name="HowHeardProvider" />
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[howLongBF]">
+              <option value="label">Breastfeeding Intent</option>
+              <option value="less than 6 months">less than 6 months</option>
+              <option value="6 months to a year">6 months to a year</option>
+              <option value="over 1 year">over 1 year</option>
+              <option value="over 2 years">over 2 years</option>
+              <option value="as long as baby wants to">as long as baby wants to</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label class="control-label">Did this info help?</label>
+          <div class="controls">
+            <label class="radio">
+              <input type="radio" name="call_log[infoHelping]" id="optionsRadios1" value="yes">Yes
+            </label>
+            <label class="radio">
+              <input type="radio" name="call_log[infoHelping]" id="optionsRadios2" value="no">No</label>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[momsAge]">
+              <option value="label">Mother's Age</option>
+              <option value="under 19">under 19</option>
+              <option value="over 19">over 19</option>
+              <option value="no response">no response</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[ethnicity]">
+              <option value="label">Ethnicity</option>
+              <option value="Caucasian">Caucasian</option>
+              <option value="African">African</option>
+              <option value="Asian">Asian</option>
+              <option value="Hispanic">Hispanic</option>
+              <option value="no response">no response</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[wic]">
+              <option value="label">WIC Status</option>
+              <option value="on WIC now">on WIC now</option>
+              <option value="WIC eligible">WIC eligible</option>
+              <option value="WIC referred">WIC referred</option>
+              <option value="not WIC eligible">not WIC eligible</option>
+              <option value="no response">no response</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <select id="select01" name="call_log[referral]">
+              <option value="label">Referred To</option>
+              <option value="Pump Station">Pump Station</option>
+              <option value="Hospital LC">Hospital LC</option>
+              <option value="Private LC">Private LC</option>
+              <option value="Health Care Provider">Health Care Provider</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label class="control-label">Would you like a call back?</label>
+          <div class="controls">
+            <label class="radio">
+              <input type="radio" name="StatusCallback" id="optionsRadios1" value="yes">
+              Yes              </label>
+            <label class="radio">
+              <input type="radio" name="StatusCallback" id="optionsRadios2" value="no">
+              No              </label>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label class="control-label">Callback Number</label>
+          <div class="controls">
+            <input type="text" class="input-large" placeholder="xxx-xxx-xxxx" name="CallbackNumber">
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <div class="controls">
+            <textarea class="input-large" id="textarea" rows="5" placeholder="Notes" name="Notes"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-large btn-primary input-large" name="submit">Log Call</button>
+
+
+    <div class="actions">
+    </div>
   </div>
 <% end %>

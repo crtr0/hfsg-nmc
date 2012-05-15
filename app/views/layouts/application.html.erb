@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HfsgNmc</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>Nursing Mothers Counsel of Oregon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <%= stylesheet_link_tag "bootstrap.css" %>
+  <%= stylesheet_link_tag "bootstrap-responsive.css" %>
+ 
+  <style>
+    @media (max-width: 480px) {}
+    @media (max-width: 767px) {}
+    @media (min-width: 768px) and (max-width: 979px) {}
+    @media (min-width: 1200px) {}
+  </style>
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="km65WQ5Xka4NaJWghr6AAlYrHHd/NCffYLqVQTab/oI=" name="csrf-token" />
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container-fluid">
+	<%= yield %>
+	</div>
 </body>
 </html>

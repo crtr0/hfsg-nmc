@@ -1,6 +1,10 @@
 HfsgNmc::Application.routes.draw do
   resources :call_logs
 
+  match "call_begin" => "call_logs#begin"
+
+  match "call_end" => "call_logs#end"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

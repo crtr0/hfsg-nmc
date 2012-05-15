@@ -80,4 +80,28 @@ class CallLogsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # new methods added for Twilio integration
+
+  def begin
+    call_log = CallLog.new
+    call_log.save
+    url = url_for :action => :end, :id => call_log
+    render :content_type => 'text/xml',
+      :text => "<Response><Say>Welcome to Nursing Mothers Counsel of Oregon. Connecting you to a counselor now.</Say><Dial action=\"#{url}\">2022856865</Dial></Response>"
+
+  end
+
+  def end
+    call_log = CallLog.find(params[:id])
+    call_log.to_number = params[:To]
+    call_log.from_number = params[:From]
+    call_log.from_city = params[:FromCity]
+    call_log.from_state = params[:FromState]
+    call_log.save
+    url = url_for :action => :edit, :id => call_log
+    render :content_type => 'text/xml',
+      :text => "<Response><Sms to='2022856865' from='(503) 766-5528'>Here is the link to your entry form for #{params[:From]}: #{url}</Sms></Response>"
+  end
+
 end
