@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  callerName: MyString
+  momsAge: MyString
+  howHeard: MyString
+  wic: MyString
+  ethnicity: MyString
+  babyAge: MyString
+  whereDelivered: MyString
+  howLongBF: MyString
+  infoHelping: MyString
+  referral: MyString
+  callBack: MyString
+
+two:
+  callerName: MyString
+  momsAge: MyString
+  howHeard: MyString
+  wic: MyString
+  ethnicity: MyString
+  babyAge: MyString
+  whereDelivered: MyString
+  howLongBF: MyString
+  infoHelping: MyString
+  referral: MyString
+  callBack: MyString

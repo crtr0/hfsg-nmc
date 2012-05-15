@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Callername:</b>
+  <%= @call_log.callerName %>
+</p>
+
+<p>
+  <b>Momsage:</b>
+  <%= @call_log.momsAge %>
+</p>
+
+<p>
+  <b>Howheard:</b>
+  <%= @call_log.howHeard %>
+</p>
+
+<p>
+  <b>Wic:</b>
+  <%= @call_log.wic %>
+</p>
+
+<p>
+  <b>Ethnicity:</b>
+  <%= @call_log.ethnicity %>
+</p>
+
+<p>
+  <b>Babyage:</b>
+  <%= @call_log.babyAge %>
+</p>
+
+<p>
+  <b>Wheredelivered:</b>
+  <%= @call_log.whereDelivered %>
+</p>
+
+<p>
+  <b>Howlongbf:</b>
+  <%= @call_log.howLongBF %>
+</p>
+
+<p>
+  <b>Infohelping:</b>
+  <%= @call_log.infoHelping %>
+</p>
+
+<p>
+  <b>Referral:</b>
+  <%= @call_log.referral %>
+</p>
+
+<p>
+  <b>Callback:</b>
+  <%= @call_log.callBack %>
+</p>
+
+
+<%= link_to 'Edit', edit_call_log_path(@call_log) %> |
+<%= link_to 'Back', call_logs_path %>

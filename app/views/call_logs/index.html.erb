@@ -1,0 +1,43 @@
+<h1>Listing call_logs</h1>
+
+<table>
+  <tr>
+    <th>Callername</th>
+    <th>Momsage</th>
+    <th>Howheard</th>
+    <th>Wic</th>
+    <th>Ethnicity</th>
+    <th>Babyage</th>
+    <th>Wheredelivered</th>
+    <th>Howlongbf</th>
+    <th>Infohelping</th>
+    <th>Referral</th>
+    <th>Callback</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @call_logs.each do |call_log| %>
+  <tr>
+    <td><%= call_log.callerName %></td>
+    <td><%= call_log.momsAge %></td>
+    <td><%= call_log.howHeard %></td>
+    <td><%= call_log.wic %></td>
+    <td><%= call_log.ethnicity %></td>
+    <td><%= call_log.babyAge %></td>
+    <td><%= call_log.whereDelivered %></td>
+    <td><%= call_log.howLongBF %></td>
+    <td><%= call_log.infoHelping %></td>
+    <td><%= call_log.referral %></td>
+    <td><%= call_log.callBack %></td>
+    <td><%= link_to 'Show', call_log %></td>
+    <td><%= link_to 'Edit', edit_call_log_path(call_log) %></td>
+    <td><%= link_to 'Destroy', call_log, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Call log', new_call_log_path %>

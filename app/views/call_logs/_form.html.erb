@@ -1,0 +1,61 @@
+<%= form_for(@call_log) do |f| %>
+  <% if @call_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@call_log.errors.count, "error") %> prohibited this call_log from being saved:</h2>
+
+      <ul>
+      <% @call_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :callerName %><br />
+    <%= f.text_field :callerName %>
+  </div>
+  <div class="field">
+    <%= f.label :momsAge %><br />
+    <%= f.text_field :momsAge %>
+  </div>
+  <div class="field">
+    <%= f.label :howHeard %><br />
+    <%= f.text_field :howHeard %>
+  </div>
+  <div class="field">
+    <%= f.label :wic %><br />
+    <%= f.text_field :wic %>
+  </div>
+  <div class="field">
+    <%= f.label :ethnicity %><br />
+    <%= f.text_field :ethnicity %>
+  </div>
+  <div class="field">
+    <%= f.label :babyAge %><br />
+    <%= f.text_field :babyAge %>
+  </div>
+  <div class="field">
+    <%= f.label :whereDelivered %><br />
+    <%= f.text_field :whereDelivered %>
+  </div>
+  <div class="field">
+    <%= f.label :howLongBF %><br />
+    <%= f.text_field :howLongBF %>
+  </div>
+  <div class="field">
+    <%= f.label :infoHelping %><br />
+    <%= f.text_field :infoHelping %>
+  </div>
+  <div class="field">
+    <%= f.label :referral %><br />
+    <%= f.text_field :referral %>
+  </div>
+  <div class="field">
+    <%= f.label :callBack %><br />
+    <%= f.text_field :callBack %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
